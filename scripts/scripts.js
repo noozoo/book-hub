@@ -133,7 +133,7 @@ async function loadLazy(doc) {
   loadFonts();
 
   if (window.location.href.includes('.aem.page')) {
-   import('../tools/sidekick/aem-sites-optimizer-preflight.js');
+    import('../tools/sidekick/aem-sites-optimizer-preflight.js');
   }
 }
 
