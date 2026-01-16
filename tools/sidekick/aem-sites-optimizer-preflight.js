@@ -1,13 +1,13 @@
-(function () {
+(function main() {
   let isAEMSitesOptimizerPreflightAppLoaded = false;
   function loadAEMSitesOptimizerPreflightApp() {
     const script = document.createElement('script');
     script.src = 'https://experience.adobe.com/solutions/OneAdobe-aem-sites-optimizer-preflight-mfe/static-assets/resources/sidekick/client.js?source=plugin';
-    script.onload = function () {
+    script.onload = function onload() {
       isAEMSitesOptimizerPreflightAppLoaded = true;
     };
-    script.onerror = function () {
-      console.error('Error loading AEMSitesOptimizerPreflightApp.');
+    script.onerror = function onerror() {
+      console.error('Error loading AEMSitesOptimizerPreflightApp.'); // eslint-disable-line no-console
     };
     document.head.appendChild(script);
   }
