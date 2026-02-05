@@ -22,7 +22,7 @@ import {
   s.async = true;
   s.dataset.universalEditor = 'true';
   document.head.appendChild(s);
-})();ead.appendChild(s);
+})();
 
 loadUniversalEditor();
 
