@@ -13,16 +13,16 @@ import {
   loadCSS,
 } from './aem.js';
 
-function loadUniversalEditor() {
-  // avoid double-loading
-  if (document.querySelector('script[data-universal-editor]')) return;
+(function loadUniversalEditor() {
+  if (window.__ue_loaded__) return;
+  window.__ue_loaded__ = true;
 
   const s = document.createElement('script');
-  s.src = 'https://universal-editor.adobe.com/corslib/LATEST';
+  s.src = 'https://universal-editor-service.adobe.io/cors.js';
   s.async = true;
   s.dataset.universalEditor = 'true';
   document.head.appendChild(s);
-}
+})();ead.appendChild(s);
 
 loadUniversalEditor();
 
