@@ -13,6 +13,19 @@ import {
   loadCSS,
 } from './aem.js';
 
+function loadUniversalEditor() {
+  // avoid double-loading
+  if (document.querySelector('script[data-universal-editor]')) return;
+
+  const s = document.createElement('script');
+  s.src = 'https://universal-editor.adobe.com/corslib/LATEST';
+  s.async = true;
+  s.dataset.universalEditor = 'true';
+  document.head.appendChild(s);
+}
+
+loadUniversalEditor();
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
